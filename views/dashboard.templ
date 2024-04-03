@@ -1,0 +1,26 @@
+package views
+
+import (
+	"github.com/alessandrolattao/htmx/components"
+	"github.com/labstack/echo/v4"
+	"github.com/alessandrolattao/htmx/helpers"
+)
+
+
+templ Dashboard(c echo.Context) {
+    <!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<title>Alessandro Lattao - HTMX </title>
+			<script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
+			<script src="https://cdn.tailwindcss.com"></script>
+		</head>
+		<body>
+            <div class="bg-purple-500 flex items-center justify-center h-screen">
+                @components.Hello(helpers.GetCookieValue(c, "email"))
+            </div>
+        </body>
+    </html>
+}
