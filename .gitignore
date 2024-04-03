@@ -1,0 +1,5 @@
+# compiled templates
+*_templ.go
+
+# tmp folder
+tmp
