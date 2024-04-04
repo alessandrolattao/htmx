@@ -1,0 +1,13 @@
+package pages
+
+import "github.com/alessandrolattao/htmx/components"
+
+templ Page1() {
+    <div class="grid grid-cols-3 gap-4 mb-4">
+        @components.Small()
+        @components.Small()
+        @components.Small()
+    </div>
+    @components.Big2()
+    @components.Big()
+}
