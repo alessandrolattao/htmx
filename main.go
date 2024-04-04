@@ -19,6 +19,14 @@ func main() {
 	// Main View
 	e.GET("/", get.Root)
 
+	// Pages
+	e.GET("/pages/dashboard", get.Dashboard)
+	e.GET("/pages/page1", get.Page1)
+	e.GET("/pages/page2", get.Page2)
+
+	// Components
+	e.GET("/components/big2", get.Big2)
+
 	// Login
 	e.POST("/login", post.Login)
 
