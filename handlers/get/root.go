@@ -8,6 +8,7 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
+// Root is the main handler for the root path.
 func Root(c echo.Context) error {
 	if !checkLoginCookie(c) {
 		Login := views.Login()
